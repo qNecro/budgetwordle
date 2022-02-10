@@ -1,0 +1,114 @@
+
+html, body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+html{
+    height: -webkit-fill-available;
+}
+
+
+body{
+    color: #d8d8d8;
+    background: #121213;
+    text-align: center;
+    font-family: ui-sans-serif, system-ui, -apple-system,'Segoe UI';
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+}
+a{
+    color:#aaaa;
+    text-decoration: none;
+    cursor: pointer;
+}
+a:hover{
+    color: #d8d8d8;
+}
+
+header h1{
+    font-size: 1.75rem;
+    font-weight: 900;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    margin:0;
+}
+
+button{
+    font-size: 1rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    line-height: 1.75rem;
+    color: #d8d8d8;
+    background: #121213;
+}
+
+button#↵,
+button#←{
+    width: 3.5rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+}
+
+
+.keyboard-row{
+    display: flex;
+    justify-content: center;
+    gap:2px;
+}
+.keyboard{
+    display: grid;
+    grid-template-rows: repeat(4,1fr);
+    gap:2px;
+    margin-bottom: 5%;
+}
+.keyboard .tile:hover{
+    color: #aaaa;
+}
+
+.keyboard .tile,
+.keyboard .again{
+    font-size: 1rem;
+    width: 2rem;
+    height: 2rem;
+    line-height: 1rem;
+    border-radius: 0.25rem;
+}
+
+@media only screen and (max-width: 940px){
+    header h1{
+        font-size: 1.5rem;
+        letter-spacing: 0.05rem;
+        margin-right: 0.5rem;
+    }
+
+}
+
+@media only screen and (max-width: 420px){
+    .keyboard .tile,
+    button{
+        font-size: 0.75rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        line-height: 0.75rem;
+    }
+    .keyboard .again{
+        padding-left: 0.25rem;
+        font-size: 0.75rem;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    button#↵,
+    button#←{
+        width: 3rem;
+        line-height: .75rem;
+        font-size: 0.75rem;
+    }
+}
